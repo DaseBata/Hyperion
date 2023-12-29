@@ -30,7 +30,7 @@ public class MacchaAzukina extends Personnage{
                 }
             }
 
-            if (this.colonne - 1 < 17){
+            if (this.colonne - 1 >= 0){
                 if(plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("R") || plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("J") || plateau[this.ligne][this.colonne-1].name.equals("_____")){
                     i++;
                 }
@@ -65,7 +65,7 @@ public class MacchaAzukina extends Personnage{
                     }
                 }
 
-                if (this.colonne - 1 < 17){
+                if (this.colonne - 1 >= 0){
                     if(plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("R") || plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("J") || plateau[this.ligne][this.colonne-1].name.equals("_____")){
                         possibilite[j][0] = this.ligne;
                         possibilite[j][1] = this.colonne - 1;
@@ -94,7 +94,7 @@ public class MacchaAzukina extends Personnage{
                 }
             }
 
-            if (this.colonne - 1 < 17){
+            if (this.colonne - 1 >= 0){
                 if(plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("B") || plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("V") || plateau[this.ligne][this.colonne-1].name.equals("_____")){
                     i++;
                 }
@@ -129,7 +129,7 @@ public class MacchaAzukina extends Personnage{
                     }
                 }
 
-                if (this.colonne - 1 < 17){
+                if (this.colonne - 1 >= 0){
                     if(plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("B") || plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("V") || plateau[this.ligne][this.colonne-1].name.equals("_____")){
                         possibilite[j][0] = this.ligne;
                         possibilite[j][1] = this.colonne - 1;
@@ -158,7 +158,7 @@ public class MacchaAzukina extends Personnage{
                 }
             }
 
-            if (this.colonne - 1 < 17){
+            if (this.colonne - 1 >= 0){
                 if(plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("R") || plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("J") || plateau[this.ligne][this.colonne-1].name.equals("_____")){
                     i++;
                 }
@@ -193,7 +193,7 @@ public class MacchaAzukina extends Personnage{
                     }
                 }
 
-                if (this.colonne - 1 < 17){
+                if (this.colonne - 1 >= 0){
                     if(plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("R") || plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("J") || plateau[this.ligne][this.colonne-1].name.equals("_____")){
                         possibilite[j][0] = this.ligne;
                         possibilite[j][1] = this.colonne - 1;
@@ -222,7 +222,7 @@ public class MacchaAzukina extends Personnage{
                 }
             }
 
-            if (this.colonne - 1 < 17){
+            if (this.colonne - 1 >= 0){
                 if(plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("B") || plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("V") || plateau[this.ligne][this.colonne-1].name.equals("_____")){
                     i++;
                 }
@@ -257,7 +257,7 @@ public class MacchaAzukina extends Personnage{
                     }
                 }
 
-                if (this.colonne - 1 < 17){
+                if (this.colonne - 1 >= 0){
                     if(plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("B") || plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("V") || plateau[this.ligne][this.colonne-1].name.equals("_____")){
                         possibilite[j][0] = this.ligne;
                         possibilite[j][1] = this.colonne - 1;
