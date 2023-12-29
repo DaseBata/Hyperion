@@ -1,8 +1,8 @@
 public class Vide extends Personnage{
 
-    public Vide(String couleur, int ligne, int colonne){
+    public Vide(String name, String couleur, int ligne, int colonne){
         super(couleur, ligne, colonne);
-        this.name = "_____";
+        this.name = "" + name;
     }
 
     @Override

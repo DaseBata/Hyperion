@@ -2,10 +2,11 @@ FAIT :
 - Deplacement Dodondondodon
 - Deplacement Family Man
 - Deplacement Tequila
+- Deplacement Maccha Azukina
 - Transformation en Over Toxicated Lady en deplaçant Tequila sur Office Lady
 
 A FAIRE :
-- Deplacement Maccha Azukina
+
 - Deplacement Office Lady
 - Transformation en Over Toxicated Lady en deplaçant Office Lady sur Tequila
 - Deplacement Steam
@@ -16,4 +17,3 @@ A FAIRE :
 - Deplacement Over Toxicated Lady
 - Gérer défaite d'une personne
 - Gérer défaite d'une équipe
-

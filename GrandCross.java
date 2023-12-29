@@ -58,15 +58,33 @@ public class GrandCross{
         System.out.println("");
     }
 
+    public void afficherTout(Personnage[][] plateau){
+
+        for (int ligne = 0; ligne < plateau.length; ligne++) {
+            System.out.print("|");
+            for (int colonne = 0; colonne < plateau.length; colonne++) {
+                System.out.print(""+plateau[ligne][colonne].name + "|");
+            }
+            System.out.println("");
+        }
+    }
+
+
     public Personnage[][] initVide(){
 
         Personnage[][] plateau = new Personnage[17][17];
 
         for (int ligne = 0; ligne < plateau.length; ligne++) {
             for (int colonne = 0; colonne < plateau[ligne].length; colonne++) {
-                plateau[ligne][colonne] = new Vide("_____", ligne, colonne);
+                if( (ligne < 5 && colonne < 5) || (ligne < 5 && colonne > 11) || (ligne > 11 && colonne < 5) || (ligne > 11 && colonne > 11)){
+                    plateau[ligne][colonne] = new Vide("+++++","_____", ligne, colonne);
+                } else {
+                    plateau[ligne][colonne] = new Vide("_____", "_____", ligne, colonne);
+                }
+
             }
         }
+
         return plateau;
     }
 
@@ -231,7 +249,7 @@ public class GrandCross{
     }
 
     public Personnage[][] actualiserPlateau(Personnage perso, Personnage[][] plateau){
-        plateau[perso.oldPosition[0]][perso.oldPosition[1]] = new Vide("_____", perso.oldPosition[0], perso.oldPosition[1]);
+        plateau[perso.oldPosition[0]][perso.oldPosition[1]] = new Vide("_____", "_____", perso.oldPosition[0], perso.oldPosition[1]);
         plateau[perso.ligne][perso.colonne] = perso;
         return plateau;
     }

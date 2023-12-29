@@ -21,7 +21,7 @@ public class Main{
         grandCross = jeu.ajoutPersoR(joueur4);
 
         jeu.afficherGrandCross(grandCross);
-
+        //jeu.afficherTout(grandCross);
 
         List<Joueur> listeJoueurs = new ArrayList<>();
         listeJoueurs.add(joueur1);
