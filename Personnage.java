@@ -24,7 +24,7 @@ public abstract class Personnage{
         }
         int[] moveChoisi = joueur.chooseMove(plateau, arrive, perso);
         if(plateau[moveChoisi[0]][moveChoisi[1]].couleur == this.couleur){
-            if((perso.name.substring(0, 2).equals("TQ")) && (plateau[moveChoisi[0]][moveChoisi[1]].name.substring(0, 2).equals("OL"))){
+            if(((perso.name.substring(0, 2).equals("TQ")) && (plateau[moveChoisi[0]][moveChoisi[1]].name.substring(0, 2).equals("OL"))) || ((perso.name.substring(0, 2).equals("OL")) && (plateau[moveChoisi[0]][moveChoisi[1]].name.substring(0, 2).equals("TQ")))){
                 this.oldPosition[0] = this.ligne;
                 this.oldPosition[1] = this.colonne;
                 this.ligne = moveChoisi[0];

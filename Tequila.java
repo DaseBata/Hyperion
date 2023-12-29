@@ -13,7 +13,7 @@ public class Tequila extends Personnage{
         if (this.couleur.equals("B")) {
 
             if (this.ligne + 1 < 17){
-                if(plateau[this.ligne+1][this.colonne].name.substring(plateau[this.ligne+1][this.colonne].name.length()-1).equals("R") || plateau[this.ligne+1][this.colonne].name.substring(plateau[this.ligne+1][this.colonne].name.length()-1).equals("J") || plateau[this.ligne+1][this.colonne].name.equals("_____") || plateau[this.ligne+1][this.colonne].name.substring(0, 2).equals("OL")){
+                if(plateau[this.ligne+1][this.colonne].name.substring(plateau[this.ligne+1][this.colonne].name.length()-1).equals("R") || plateau[this.ligne+1][this.colonne].name.substring(plateau[this.ligne+1][this.colonne].name.length()-1).equals("J") || plateau[this.ligne+1][this.colonne].name.equals("_____") || (plateau[this.ligne+1][this.colonne].name.substring(0, 2).equals("OL") && plateau[this.ligne+1][this.colonne].name.substring(plateau[this.ligne+1][this.colonne].name.length()-1).equals(""+this.couleur))){
                     i = 1;
                 }
             }
@@ -28,7 +28,7 @@ public class Tequila extends Personnage{
         } else if (this.couleur.equals("J")){
 
             if (this.ligne - 1 >= 0){
-                if(plateau[this.ligne-1][this.colonne].name.substring(plateau[this.ligne-1][this.colonne].name.length()-1).equals("B") || plateau[this.ligne-1][this.colonne].name.substring(plateau[this.ligne-1][this.colonne].name.length()-1).equals("V") || plateau[this.ligne-1][this.colonne].name.equals("_____")){
+                if(plateau[this.ligne-1][this.colonne].name.substring(plateau[this.ligne-1][this.colonne].name.length()-1).equals("B") || plateau[this.ligne-1][this.colonne].name.substring(plateau[this.ligne-1][this.colonne].name.length()-1).equals("V") || plateau[this.ligne-1][this.colonne].name.equals("_____") || (plateau[this.ligne-1][this.colonne].name.substring(0, 2).equals("OL") && plateau[this.ligne-1][this.colonne].name.substring(plateau[this.ligne-1][this.colonne].name.length()-1).equals(""+this.couleur))){
                     i = 1;
                 }
             }
@@ -43,7 +43,7 @@ public class Tequila extends Personnage{
         } else if (this.couleur.equals("V")){
 
             if (this.colonne + 1 < 17){
-                if(plateau[this.ligne][this.colonne+1].name.substring(plateau[this.ligne][this.colonne+1].name.length()-1).equals("J") || plateau[this.ligne][this.colonne+1].name.substring(plateau[this.ligne][this.colonne+1].name.length()-1).equals("R") || plateau[this.ligne][this.colonne+1].name.equals("_____")){
+                if(plateau[this.ligne][this.colonne+1].name.substring(plateau[this.ligne][this.colonne+1].name.length()-1).equals("J") || plateau[this.ligne][this.colonne+1].name.substring(plateau[this.ligne][this.colonne+1].name.length()-1).equals("R") || plateau[this.ligne][this.colonne+1].name.equals("_____") || (plateau[this.ligne][this.colonne+1].name.substring(0, 2).equals("OL") && plateau[this.ligne][this.colonne+1].name.substring(plateau[this.ligne][this.colonne+1].name.length()-1).equals(""+this.couleur))){
                     i = 1;
                 }
             }
@@ -58,7 +58,7 @@ public class Tequila extends Personnage{
         } else {
 
             if (this.colonne - 1 >= 0){
-                if(plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("B") || plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("V") || plateau[this.ligne][this.colonne-1].name.equals("_____")){
+                if(plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("B") || plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals("V") || plateau[this.ligne][this.colonne-1].name.equals("_____") || (plateau[this.ligne][this.colonne-1].name.substring(0, 2).equals("OL") && plateau[this.ligne][this.colonne-1].name.substring(plateau[this.ligne][this.colonne-1].name.length()-1).equals(""+this.couleur))){
                     i = 1;
                 }
             }

@@ -90,7 +90,7 @@ public class GrandCross{
 
     public Personnage[][] ajoutPersoB(Joueur joueur){
 
-        Abrasimovich abra = new Abrasimovich(joueur.couleur, 0, 8);
+        Abrasimovich abra = new Abrasimovich(joueur.couleur, 0, 9);
         MacchaAzukina macchaA = new MacchaAzukina(joueur.couleur, 1, 6);
         FamilyMan familyM = new FamilyMan(joueur.couleur, 3, 8);
         Dodondondodon dodon = new Dodondondodon(joueur.couleur, 4, 8);
@@ -142,7 +142,7 @@ public class GrandCross{
         Tequila tequila1 = new Tequila("TQ1_" ,joueur.couleur, 11, 0);
         Tequila tequila2 = new Tequila("TQ2_" ,joueur.couleur, 11, 2);
         Tequila tequila3 = new Tequila("TQ3_" ,joueur.couleur, 11, 3);
-        Tequila tequila4 = new Tequila("TQ4_" ,joueur.couleur, 5, 0);
+        Tequila tequila4 = new Tequila("TQ4_" ,joueur.couleur, 6, 0);
         Tequila tequila5 = new Tequila("TQ5_" ,joueur.couleur, 5, 2);
         Tequila tequila6 = new Tequila("TQ6_" ,joueur.couleur, 5, 3);
 
