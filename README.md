@@ -4,11 +4,11 @@ FAIT :
 - Deplacement Tequila
 - Deplacement Maccha Azukina
 - Transformation en Over Toxicated Lady en deplaçant Tequila sur Office Lady
+- Deplacement Office Lady
+- Transformation en Over Toxicated Lady en deplaçant Office Lady sur Tequila
 
 A FAIRE :
 
-- Deplacement Office Lady
-- Transformation en Over Toxicated Lady en deplaçant Office Lady sur Tequila
 - Deplacement Steam
 - Deplacement Abrasimovich
 - Deplacement Shoe
