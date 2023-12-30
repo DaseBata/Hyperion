@@ -48,6 +48,21 @@ public abstract class Personnage{
                     this.colonne = moveChoisi[1];
                     return 4;
                 }
+            } else if (plateau[moveChoisi[0]][moveChoisi[1]].name.substring(0, 2).equals("AB")){
+                String couleur = plateau[moveChoisi[0]][moveChoisi[1]].couleur;
+                    this.oldPosition[0] = this.ligne;
+                    this.oldPosition[1] = this.colonne;
+                    this.ligne = moveChoisi[0];
+                    this.colonne = moveChoisi[1];
+                    if(couleur.equals("B")){
+                        return 5;
+                    } if(couleur.equals("V")){
+                        return 6;
+                    } if(couleur.equals("J")){
+                        return 7;
+                    } else {
+                        return 8;
+                    }
             }
         }
 

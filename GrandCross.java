@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class GrandCross{
 
@@ -90,16 +91,16 @@ public class GrandCross{
 
     public Personnage[][] ajoutPersoB(Joueur joueur){
 
-        Abrasimovich abra = new Abrasimovich(joueur.couleur, 0, 9);
+        Abrasimovich abra = new Abrasimovich(joueur.couleur, 0, 8);
         MacchaAzukina macchaA = new MacchaAzukina(joueur.couleur, 1, 6);
-        FamilyMan familyM = new FamilyMan(joueur.couleur, 3, 8);
+        FamilyMan familyM = new FamilyMan(joueur.couleur, 2, 8);
         Dodondondodon dodon = new Dodondondodon(joueur.couleur, 4, 8);
         OfficeLady officeL = new OfficeLady(joueur.couleur, 1, 10);
         Shoe shoe = new Shoe(joueur.couleur, 3, 6);
         Steam steam = new Steam(joueur.couleur, 3, 10);
         MassProducedZaf massProd1 = new MassProducedZaf("MP1_", joueur.couleur, 4, 9);
         MassProducedZaf massProd2 = new MassProducedZaf("MP2_", joueur.couleur, 4, 7);
-        Tequila tequila1 = new Tequila("TQ1_" ,joueur.couleur, 0, 10);
+        Tequila tequila1 = new Tequila("TQ1_" ,joueur.couleur, 0, 5);
         Tequila tequila2 = new Tequila("TQ2_" ,joueur.couleur, 2, 5);
         Tequila tequila3 = new Tequila("TQ3_" ,joueur.couleur, 3, 5);
         Tequila tequila4 = new Tequila("TQ4_" ,joueur.couleur, 0, 11);
@@ -132,7 +133,7 @@ public class GrandCross{
 
         Abrasimovich abra = new Abrasimovich(joueur.couleur, 8, 0);
         MacchaAzukina macchaA = new MacchaAzukina(joueur.couleur, 10, 1);
-        FamilyMan familyM = new FamilyMan(joueur.couleur, 8, 3);
+        FamilyMan familyM = new FamilyMan(joueur.couleur, 8, 2);
         Dodondondodon dodon = new Dodondondodon(joueur.couleur, 8, 4);
         OfficeLady officeL = new OfficeLady(joueur.couleur, 6, 1);
         Shoe shoe = new Shoe(joueur.couleur, 10, 3);
@@ -142,7 +143,7 @@ public class GrandCross{
         Tequila tequila1 = new Tequila("TQ1_" ,joueur.couleur, 11, 0);
         Tequila tequila2 = new Tequila("TQ2_" ,joueur.couleur, 11, 2);
         Tequila tequila3 = new Tequila("TQ3_" ,joueur.couleur, 11, 3);
-        Tequila tequila4 = new Tequila("TQ4_" ,joueur.couleur, 6, 0);
+        Tequila tequila4 = new Tequila("TQ4_" ,joueur.couleur, 5, 0);
         Tequila tequila5 = new Tequila("TQ5_" ,joueur.couleur, 5, 2);
         Tequila tequila6 = new Tequila("TQ6_" ,joueur.couleur, 5, 3);
 
@@ -172,12 +173,12 @@ public class GrandCross{
 
         Abrasimovich abra = new Abrasimovich(joueur.couleur, 16, 8);
         MacchaAzukina macchaA = new MacchaAzukina(joueur.couleur, 15, 10);
-        FamilyMan familyM = new FamilyMan(joueur.couleur, 8, 8);
+        FamilyMan familyM = new FamilyMan(joueur.couleur, 14, 8);
         Dodondondodon dodon = new Dodondondodon(joueur.couleur, 12, 8);
         OfficeLady officeL = new OfficeLady(joueur.couleur, 15, 6);
         Shoe shoe = new Shoe(joueur.couleur, 13, 10);
         Steam steam = new Steam(joueur.couleur, 13, 6);
-        MassProducedZaf massProd1 = new MassProducedZaf("MP1_", joueur.couleur, 8, 7);
+        MassProducedZaf massProd1 = new MassProducedZaf("MP1_", joueur.couleur, 12, 7);
         MassProducedZaf massProd2 = new MassProducedZaf("MP2_", joueur.couleur, 12, 9);
         Tequila tequila1 = new Tequila("TQ1_" ,joueur.couleur, 16, 11);
         Tequila tequila2 = new Tequila("TQ2_" ,joueur.couleur, 14, 11);
@@ -212,7 +213,7 @@ public class GrandCross{
 
         Abrasimovich abra = new Abrasimovich(joueur.couleur, 8, 16);
         MacchaAzukina macchaA = new MacchaAzukina(joueur.couleur, 6, 15);
-        FamilyMan familyM = new FamilyMan(joueur.couleur, 8, 13);
+        FamilyMan familyM = new FamilyMan(joueur.couleur, 8, 14);
         Dodondondodon dodon = new Dodondondodon(joueur.couleur, 8, 12);
         OfficeLady officeL = new OfficeLady(joueur.couleur, 10, 15);
         Shoe shoe = new Shoe(joueur.couleur, 6, 13);
@@ -252,5 +253,59 @@ public class GrandCross{
         plateau[perso.oldPosition[0]][perso.oldPosition[1]] = new Vide("_____", "_____", perso.oldPosition[0], perso.oldPosition[1]);
         plateau[perso.ligne][perso.colonne] = perso;
         return plateau;
+    }
+
+    public Personnage[][] defaitePersonnage(String couleur, Personnage[][] plateau){
+        for(int i = 0; i < plateau.length; i++){
+            for(int j = 0; j < plateau.length; j++){
+                if(plateau[i][j].couleur.equals(""+couleur)){
+                    plateau[i][j] = new Vide("_____", "_____", i, j);
+                }
+            }
+        }
+        return plateau;
+    }
+
+    public List<Joueur> enleverJoueur(String couleur, String couleurCherche, List<Joueur> listeJoueurs){
+
+        boolean defaite = true;
+        Joueur joueurTest;
+        for (int i = listeJoueurs.size() - 1; i >= 0; i--) {
+            if (listeJoueurs.get(i).couleur.equals("" + couleur)) {
+                for (int j = listeJoueurs.size() - 1; j >= 0; j--) {
+                    if (listeJoueurs.get(j).couleur.equals("" + couleurCherche)) {
+                        listeJoueurs.set(i, listeJoueurs.get(j));
+                        defaite = false;
+                    }
+                }
+            }
+        }
+        if(defaite == true){
+            for (int k = listeJoueurs.size() - 1; k >= 0; k--) {
+                if (listeJoueurs.get(k).couleur.equals("" + couleur)) {
+                    listeJoueurs.remove(k);
+                }
+            }
+        }
+        return listeJoueurs;
+    }
+
+    public boolean[] vainqueur(List<Joueur> listeJoueurs){
+
+        boolean[] tableauBoolean = new boolean[2];
+
+        tableauBoolean[0] = false;
+        tableauBoolean[1] = false;
+
+        if(listeJoueurs.size() == 2){
+            if(listeJoueurs.get(0).couleur.equals("B") && listeJoueurs.get(1).couleur.equals("V") || listeJoueurs.get(0).couleur.equals("B") && listeJoueurs.get(1).couleur.equals("B") || listeJoueurs.get(0).couleur.equals("V") && listeJoueurs.get(1).couleur.equals("V")){
+                tableauBoolean[0] = true;
+                tableauBoolean[1] = true;
+            } else if (listeJoueurs.get(0).couleur.equals("R") && listeJoueurs.get(1).couleur.equals("J") || listeJoueurs.get(0).couleur.equals("R") && listeJoueurs.get(1).couleur.equals("R") || listeJoueurs.get(0).couleur.equals("J") && listeJoueurs.get(1).couleur.equals("J")){
+                tableauBoolean[0] = true;
+                tableauBoolean[1] = false;
+            }
+        }
+        return tableauBoolean;
     }
 }

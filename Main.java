@@ -11,11 +11,11 @@ public class Main{
         Joueur joueur1 = new Joueur("B");
         grandCross = jeu.ajoutPersoB(joueur1);
 
-        Joueur joueur2 = new Joueur("V");
-        grandCross = jeu.ajoutPersoV(joueur2);
+        Joueur joueur2 = new Joueur("J");
+        grandCross = jeu.ajoutPersoJ(joueur2);
 
-        Joueur joueur3 = new Joueur("J");
-        grandCross = jeu.ajoutPersoJ(joueur3);
+        Joueur joueur3 = new Joueur("V");
+        grandCross = jeu.ajoutPersoV(joueur3);
 
         Joueur joueur4 = new Joueur("R");
         grandCross = jeu.ajoutPersoR(joueur4);
@@ -31,7 +31,13 @@ public class Main{
 
         int nombreDeJoueurs = listeJoueurs.size();
 
-        boolean finDuJeu = false;
+        boolean[] tableauFin = new boolean[2];
+
+        tableauFin[0] = false;
+        tableauFin[1] = false;
+
+        boolean finDuJeu = tableauFin[0];
+
         boolean bonPerso = false;
         Personnage perso = null;
 
@@ -42,6 +48,13 @@ public class Main{
         while (finDuJeu != true){
             while (bonPerso != true){
             //CHOISIR CASE DE PERSONNAGE
+
+                System.out.println("i : "+ i + ", nombre de Joueur : " + listeJoueurs.size());
+                for (int k = 0; k < listeJoueurs.size(); k++) {
+                    System.out.print(listeJoueurs.get(k).couleur);
+                }
+                System.out.println("");
+
                 System.out.println("Tour de Jeu : " + currentJoueur.couleur);
                 Scanner scanner = new Scanner(System.in);
                 System.out.print("Choix personnage (x,y) ? : ");
@@ -78,6 +91,22 @@ public class Main{
                         vide.oldPosition[1] = perso.oldPosition[1];
                         perso = vide;
                         bonPerso = true;
+                    } else if (resultat == 5){
+                        jeu.defaitePersonnage("B", grandCross);
+                        listeJoueurs = jeu.enleverJoueur("B", "V", listeJoueurs);
+                        bonPerso = true;
+                    } else if (resultat == 6){
+                        jeu.defaitePersonnage("V", grandCross);
+                        listeJoueurs = jeu.enleverJoueur("V", "B", listeJoueurs);
+                        bonPerso = true;
+                    } else if (resultat == 7){
+                        jeu.defaitePersonnage("J", grandCross);
+                        listeJoueurs = jeu.enleverJoueur("J", "R", listeJoueurs);
+                        bonPerso = true;
+                    } else if (resultat == 8){
+                        jeu.defaitePersonnage("R", grandCross);
+                        listeJoueurs = jeu.enleverJoueur("R", "J", listeJoueurs);
+                        bonPerso = true;
                     }
                 }
             }
@@ -85,14 +114,20 @@ public class Main{
             jeu.afficherGrandCross(grandCross);
 
             i++;
-            i = i % nombreDeJoueurs;
+            i = i % listeJoueurs.size();
             currentJoueur = listeJoueurs.get(i);
             bonPerso = false;
+            tableauFin = jeu.vainqueur(listeJoueurs);
+            finDuJeu = tableauFin[0];
         }
 
-        grandCross = jeu.actualiserPlateau(perso, grandCross);
-        jeu.afficherGrandCross(grandCross);
-
+        System.out.println("");
+        if(tableauFin[1] == true){
+            System.out.println("VAINQUEUR BLEU ET VERT");
+        } else {
+            System.out.println("VAINQUEUR JAUNE ET ROUGE");
+        }
+        System.out.println("");
     }
 }
 //FAIRE LES CASES D'ARRIVÉES, A SURLIGNER
