@@ -19,6 +19,6 @@ A FAIRE :
 - Deplacement Mass Produced Zaf
 - Deplacement Over Toxicated Lady
 
-FINALISER :
+FINALISATION :
 
 - Faire une IHM pour le jeu (jouable à la souris)
