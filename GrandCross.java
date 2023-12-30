@@ -95,8 +95,8 @@ public class GrandCross{
         FamilyMan familyM = new FamilyMan(joueur.couleur, 3, 8);
         Dodondondodon dodon = new Dodondondodon(joueur.couleur, 4, 8);
         OfficeLady officeL = new OfficeLady(joueur.couleur, 1, 10);
-        Shoe shoe = new Shoe(joueur.couleur, 8, 6);
-        Steam steam = new Steam(joueur.couleur, 8, 10);
+        Shoe shoe = new Shoe(joueur.couleur, 3, 6);
+        Steam steam = new Steam(joueur.couleur, 3, 10);
         MassProducedZaf massProd1 = new MassProducedZaf("MP1_", joueur.couleur, 4, 9);
         MassProducedZaf massProd2 = new MassProducedZaf("MP2_", joueur.couleur, 4, 7);
         Tequila tequila1 = new Tequila("TQ1_" ,joueur.couleur, 0, 10);
@@ -172,12 +172,12 @@ public class GrandCross{
 
         Abrasimovich abra = new Abrasimovich(joueur.couleur, 16, 8);
         MacchaAzukina macchaA = new MacchaAzukina(joueur.couleur, 15, 10);
-        FamilyMan familyM = new FamilyMan(joueur.couleur, 13, 8);
+        FamilyMan familyM = new FamilyMan(joueur.couleur, 8, 8);
         Dodondondodon dodon = new Dodondondodon(joueur.couleur, 12, 8);
         OfficeLady officeL = new OfficeLady(joueur.couleur, 15, 6);
         Shoe shoe = new Shoe(joueur.couleur, 13, 10);
         Steam steam = new Steam(joueur.couleur, 13, 6);
-        MassProducedZaf massProd1 = new MassProducedZaf("MP1_", joueur.couleur, 12, 7);
+        MassProducedZaf massProd1 = new MassProducedZaf("MP1_", joueur.couleur, 8, 7);
         MassProducedZaf massProd2 = new MassProducedZaf("MP2_", joueur.couleur, 12, 9);
         Tequila tequila1 = new Tequila("TQ1_" ,joueur.couleur, 16, 11);
         Tequila tequila2 = new Tequila("TQ2_" ,joueur.couleur, 14, 11);

@@ -9,10 +9,10 @@ FAIT :
 - Deplacement Abrasimovich
 - Deplacement Steam
 - Deplacement Shoe
+- Dead extrem attack (Si Family Man est détruit à coté de Mass Produced Zaf) -> détruit la pièce attaquante
 
 A FAIRE :
 
-- Dead extrem attack (Si Family Man est détruit à coté de Mass Produced Zaf) -> détruit la pièce attaquante
 - Deplacement Mass Produced Zaf
 - Deplacement Over Toxicated Lady
 - Gérer défaite d'une personne

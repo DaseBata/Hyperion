@@ -57,15 +57,26 @@ public class Main{
                 if( currentJoueur.couleur.equals("" + perso.name.charAt(perso.name.length() - 1))){
                     resultat = perso.move(grandCross, currentJoueur, perso);
                     System.out.println("Resulat moove : "+ resultat);
+                    // Cas normal
                     if(resultat == 1){
                         bonPerso = true;
+                    // Perte d'un joueur
                     } else if(resultat == 2){
                         System.out.println("fin perso couleur : ");
+                    // Création OTL
                     } else if(resultat == 3){
+                        System.out.println("Transformation OTL !");
                         OverToxicatedLady otl = new OverToxicatedLady(currentJoueur.couleur, perso.ligne, perso.colonne);
                         otl.oldPosition[0] = perso.oldPosition[0];
                         otl.oldPosition[1] = perso.oldPosition[1];
                         perso = otl;
+                        bonPerso = true;
+                    } else if(resultat == 4){
+                        System.out.println("Dead Extrem Attack !");
+                        Vide vide = new Vide("_____", "_____", perso.ligne, perso.colonne);
+                        vide.oldPosition[0] = perso.oldPosition[0];
+                        vide.oldPosition[1] = perso.oldPosition[1];
+                        perso = vide;
                         bonPerso = true;
                     }
                 }
