@@ -26,6 +26,9 @@ FINALISATION:
 HOW TO RUN DE THE GAME
 
 $ git clone https://github.com/DaseBata/Hyperion
+
 $ cd Hyperion
+
 $ javac *.java
+
 $ java Main
