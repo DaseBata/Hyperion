@@ -49,15 +49,15 @@ public class Main{
             while (bonPerso != true){
             //CHOISIR CASE DE PERSONNAGE
 
-                System.out.println("i : "+ i + ", nombre de Joueur : " + listeJoueurs.size());
+                System.out.println("Player order");
                 for (int k = 0; k < listeJoueurs.size(); k++) {
                     System.out.print(listeJoueurs.get(k).couleur);
                 }
                 System.out.println("");
 
-                System.out.println("Tour de Jeu : " + currentJoueur.couleur);
+                System.out.println("Player turn : " + currentJoueur.couleur);
                 Scanner scanner = new Scanner(System.in);
-                System.out.print("Choix personnage (x,y) ? : ");
+                System.out.print("Chose character (x,y) ? : ");
                 String ligneSaisie = scanner.nextLine();
                 String[] casePerso = ligneSaisie.split(",");
 
@@ -65,45 +65,41 @@ public class Main{
                 int colonne = Integer.parseInt(casePerso[1]);
 
                 perso = currentJoueur.getPersonnage(grandCross, ligne, colonne);
-                System.out.println("" + perso.name);
+                System.out.println("Character picked : " + perso.name);
                 //System.out.println("J " + currentJoueur.couleur + ",P " + perso.name.charAt(perso.name.length() - 1));
                 if( currentJoueur.couleur.equals("" + perso.name.charAt(perso.name.length() - 1))){
                     resultat = perso.move(grandCross, currentJoueur, perso);
-                    System.out.println("Resulat moove : "+ resultat);
                     // Cas normal
                     if(resultat == 1){
                         bonPerso = true;
-                    // Perte d'un joueur
-                    } else if(resultat == 2){
-                        System.out.println("fin perso couleur : ");
                     // Création OTL
-                    } else if(resultat == 3){
+                    } else if(resultat == 2){
                         System.out.println("Transformation OTL !");
                         OverToxicatedLady otl = new OverToxicatedLady(currentJoueur.couleur, perso.ligne, perso.colonne);
                         otl.oldPosition[0] = perso.oldPosition[0];
                         otl.oldPosition[1] = perso.oldPosition[1];
                         perso = otl;
                         bonPerso = true;
-                    } else if(resultat == 4){
+                    } else if(resultat == 3){
                         System.out.println("Dead Extrem Attack !");
                         Vide vide = new Vide("_____", "_____", perso.ligne, perso.colonne);
                         vide.oldPosition[0] = perso.oldPosition[0];
                         vide.oldPosition[1] = perso.oldPosition[1];
                         perso = vide;
                         bonPerso = true;
-                    } else if (resultat == 5){
+                    } else if (resultat == 4){
                         jeu.defaitePersonnage("B", grandCross);
                         listeJoueurs = jeu.enleverJoueur("B", "V", listeJoueurs);
                         bonPerso = true;
-                    } else if (resultat == 6){
+                    } else if (resultat == 5){
                         jeu.defaitePersonnage("V", grandCross);
                         listeJoueurs = jeu.enleverJoueur("V", "B", listeJoueurs);
                         bonPerso = true;
-                    } else if (resultat == 7){
+                    } else if (resultat == 6){
                         jeu.defaitePersonnage("J", grandCross);
                         listeJoueurs = jeu.enleverJoueur("J", "R", listeJoueurs);
                         bonPerso = true;
-                    } else if (resultat == 8){
+                    } else if (resultat == 7){
                         jeu.defaitePersonnage("R", grandCross);
                         listeJoueurs = jeu.enleverJoueur("R", "J", listeJoueurs);
                         bonPerso = true;
@@ -123,9 +119,9 @@ public class Main{
 
         System.out.println("");
         if(tableauFin[1] == true){
-            System.out.println("VAINQUEUR BLEU ET VERT");
+            System.out.println("WINNERS BLUE (B) AND GREEN (V)");
         } else {
-            System.out.println("VAINQUEUR JAUNE ET ROUGE");
+            System.out.println("WINNERS YELLOW (J) AND RED (R)");
         }
         System.out.println("");
     }

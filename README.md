@@ -1,24 +1,31 @@
-FAIT :
+DONE :
 
-- Deplacement Dodondondodon
-- Deplacement Family Man
-- Deplacement Tequila
-- Deplacement Maccha Azukina
-- Transformation en Over Toxicated Lady en deplaçant Tequila sur Office Lady
-- Deplacement Office Lady
-- Transformation en Over Toxicated Lady en deplaçant Office Lady sur Tequila
-- Deplacement Abrasimovich
-- Deplacement Steam
-- Deplacement Shoe
-- Dead extrem attack (Si Family Man est détruit à coté de Mass Produced Zaf) -> détruit la pièce attaquante
-- Gérer défaite d'une personne
-- Gérer défaite d'une équipe
+- Move Dodondondodon
+- Move Family Man
+- Move Tequila
+- Move Maccha Azukina
+- Transformation in Over Toxicated Lady when moving Tequila on Office Lady
+- Move Office Lady
+- Transformation in Over Toxicated Lady when moving Office Lady on Tequila
+- Move Abrasimovich
+- Move Steam
+- Move Shoe
+- Dead extrem attack (If Family Man is destroy next to Mass Produced Zaf) -> remove piece that took Family Man
+- Lose of one player
+- Lose of one team
 
-A FAIRE :
+TO DO :
 
-- Deplacement Mass Produced Zaf
-- Deplacement Over Toxicated Lady
+- Move Mass Produced Zaf
+- Move Over Toxicated Lady
 
-FINALISER :
+FINALISATION:
 
-- Faire une IHM pour le jeu (jouable à la souris)
+- Playable with a mouse
+
+HOW TO RUN DE THE GAME
+
+$ git clone https://github.com/DaseBata/Hyperion
+$ cd Hyperion
+$ javac *.java
+$ java Main

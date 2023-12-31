@@ -16,7 +16,7 @@ public abstract class Personnage{
 
     public int move(Personnage[][] plateau, Joueur joueur, Personnage perso){
 
-        System.out.println("------Case(s) Disponible(s)------");
+        System.out.println("------Allowed mooves------");
 
         int[][] arrive = this.futuresCases(plateau);
         if( arrive == null ){
@@ -29,14 +29,14 @@ public abstract class Personnage{
                 this.oldPosition[1] = this.colonne;
                 this.ligne = moveChoisi[0];
                 this.colonne = moveChoisi[1];
-                return 3;
+                return 2;
             } else {
                 System.out.println(""+plateau[moveChoisi[0]][moveChoisi[1]].couleur);
                 return 0;
             }
         }                                                                                                                                                                                     //
         if((this.couleur.equals("B") || this.couleur.equals("V")) && (plateau[moveChoisi[0]][moveChoisi[1]].couleur.equals("R") || plateau[moveChoisi[0]][moveChoisi[1]].couleur.equals("J")) || (this.couleur.equals("R") || this.couleur.equals("J")) && (plateau[moveChoisi[0]][moveChoisi[1]].couleur.equals("B") || plateau[moveChoisi[0]][moveChoisi[1]].couleur.equals("V"))){
-            System.out.println("Piece prise : " + plateau[moveChoisi[0]][moveChoisi[1]].name);
+            System.out.println("Piece taken : " + plateau[moveChoisi[0]][moveChoisi[1]].name);
             //GÉRER LA PRISE DE PIECE POUR TESTER LA VICTOIRE
             if(plateau[moveChoisi[0]][moveChoisi[1]].name.substring(0, 2).equals("FM")){
                 boolean dEA = false;
@@ -46,7 +46,7 @@ public abstract class Personnage{
                     this.oldPosition[1] = this.colonne;
                     this.ligne = moveChoisi[0];
                     this.colonne = moveChoisi[1];
-                    return 4;
+                    return 3;
                 }
             } else if (plateau[moveChoisi[0]][moveChoisi[1]].name.substring(0, 2).equals("AB")){
                 String couleur = plateau[moveChoisi[0]][moveChoisi[1]].couleur;
@@ -55,13 +55,13 @@ public abstract class Personnage{
                     this.ligne = moveChoisi[0];
                     this.colonne = moveChoisi[1];
                     if(couleur.equals("B")){
-                        return 5;
+                        return 4;
                     } if(couleur.equals("V")){
-                        return 6;
+                        return 5;
                     } if(couleur.equals("J")){
-                        return 7;
+                        return 6;
                     } else {
-                        return 8;
+                        return 7;
                     }
             }
         }

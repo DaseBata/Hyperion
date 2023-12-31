@@ -28,7 +28,7 @@ public class Joueur{
             while (dedans == false){
                 //scanner
                 Scanner scanner = new Scanner(System.in);
-                System.out.print("choix | x,y : ");
+                System.out.print("choice | x,y : ");
                 String ligneSaisie = scanner.nextLine();
                 String[] nombres = ligneSaisie.split(",");
 
@@ -46,23 +46,23 @@ public class Joueur{
 
             // ETRE SUR LE PLATEAU ET VOULOIR ALLER SUR UNE CASE VIDE
             if( plateau[choixJoueur[0]][choixJoueur[1]].name == "_____"){
-                System.out.println("CAS(1) : Personnage sur la case d'arrive : " + plateau[choixJoueur[0]][choixJoueur[1]].name);
+                System.out.println("CASE(1) : Character on the selected case : " + plateau[choixJoueur[0]][choixJoueur[1]].name);
                 choixValide = true;
             }
 
             // ETRE SUR LE PLATEAU ET VOULOIR ALLER SUR UNE CASE PRISE PAR UNE PIECE DE LA MEME COULEUR
             else if( plateau[choixJoueur[0]][choixJoueur[1]].name.substring(plateau[choixJoueur[0]][choixJoueur[1]].name.length()-1).equals("" + this.couleur)){
-                System.out.println("CAS(2) : Changement de Personnage ou transformation OTL");
+                System.out.println("CASE(2) : Changing character or transformation in OTL");
                 choixValide = true;
             }
 
             //ETRE SUR LE PLATEAU ET VOULOIR ALLER SUR UNE CASE PRISE PAR UNE PIECE ADVERSE
             else if(!(plateau[choixJoueur[0]][choixJoueur[1]].name.substring(plateau[choixJoueur[0]][choixJoueur[1]].name.length()-1).equals("" + this.couleur))){
-                System.out.println("CAS(3) : Personnage sur la case d'arrive : " + plateau[choixJoueur[0]][choixJoueur[1]].name);
+                System.out.println("CASE(3) : Character on the selected case : " + plateau[choixJoueur[0]][choixJoueur[1]].name);
                 choixValide = true;
             }
         }
-        System.out.println("------Fin Choix------");
+        System.out.println("------END CHOICE------");
         return choixJoueur;
     }
 }
