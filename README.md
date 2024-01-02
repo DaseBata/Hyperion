@@ -1,7 +1,11 @@
 HYPÉRION TRAILER :
 
 
-https://github.com/DaseBata/Hyperion/assets/102878534/b5b3f531-6c1b-4467-a1c7-ae5cb10efd62
+
+
+https://github.com/DaseBata/Hyperion/assets/102878534/7ac286d4-6a8d-47d0-9e08-b78cc7119226
+
+
 
 
 DONE :
