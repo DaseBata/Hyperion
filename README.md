@@ -43,7 +43,7 @@ FINALISATION:
 
 - Playable with a mouse
 
-HOW TO RUN DE THE GAME
+HOW TO RUN THE GAME
 
 $ git clone https://github.com/DaseBata/Hyperion
 
