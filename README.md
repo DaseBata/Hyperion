@@ -1,4 +1,4 @@
-Personnal projet with the goal of developping the Hyperion game create in the anime Sket Dance.
+Personnal projet with the goal of developping the Hyperion game originally created in the anime Sket Dance.
 
 HYPÉRION TRAILER :
 
